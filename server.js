@@ -83,7 +83,6 @@ app.post("/login", async (req, res) => {
         let b = a.pass;
         let c = md5(passwd);
         if (b==c){
-            
             res.cookie("username", name, {
                 maxAge: 30 * 24 * 60 * 60 * 1000,
                 secure: true,
